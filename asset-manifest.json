@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/talentos-digitais-localiza/static/css/main.346c23a1.chunk.css",
+    "main.js": "/talentos-digitais-localiza/static/js/main.2e1050c7.chunk.js",
+    "main.js.map": "/talentos-digitais-localiza/static/js/main.2e1050c7.chunk.js.map",
+    "runtime-main.js": "/talentos-digitais-localiza/static/js/runtime-main.82dd5dcc.js",
+    "runtime-main.js.map": "/talentos-digitais-localiza/static/js/runtime-main.82dd5dcc.js.map",
+    "static/js/2.29f98829.chunk.js": "/talentos-digitais-localiza/static/js/2.29f98829.chunk.js",
+    "static/js/2.29f98829.chunk.js.map": "/talentos-digitais-localiza/static/js/2.29f98829.chunk.js.map",
+    "index.html": "/talentos-digitais-localiza/index.html",
+    "precache-manifest.6509df1129fe246028f57b903880c733.js": "/talentos-digitais-localiza/precache-manifest.6509df1129fe246028f57b903880c733.js",
+    "service-worker.js": "/talentos-digitais-localiza/service-worker.js",
+    "static/css/main.346c23a1.chunk.css.map": "/talentos-digitais-localiza/static/css/main.346c23a1.chunk.css.map",
+    "static/js/2.29f98829.chunk.js.LICENSE": "/talentos-digitais-localiza/static/js/2.29f98829.chunk.js.LICENSE",
+    "static/media/index.css": "/talentos-digitais-localiza/static/media/estrela-da-morte.1f6bc3df.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.82dd5dcc.js",
+    "static/js/2.29f98829.chunk.js",
+    "static/css/main.346c23a1.chunk.css",
+    "static/js/main.2e1050c7.chunk.js"
+  ]
+}
