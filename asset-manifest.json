@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/talentos-digitais-localiza/static/css/main.346c23a1.chunk.css",
-    "main.js": "/talentos-digitais-localiza/static/js/main.4aa298fa.chunk.js",
-    "main.js.map": "/talentos-digitais-localiza/static/js/main.4aa298fa.chunk.js.map",
+    "main.css": "/talentos-digitais-localiza/static/css/main.5dc2804f.chunk.css",
+    "main.js": "/talentos-digitais-localiza/static/js/main.ccc0db02.chunk.js",
+    "main.js.map": "/talentos-digitais-localiza/static/js/main.ccc0db02.chunk.js.map",
     "runtime-main.js": "/talentos-digitais-localiza/static/js/runtime-main.82dd5dcc.js",
     "runtime-main.js.map": "/talentos-digitais-localiza/static/js/runtime-main.82dd5dcc.js.map",
-    "static/js/2.29f98829.chunk.js": "/talentos-digitais-localiza/static/js/2.29f98829.chunk.js",
-    "static/js/2.29f98829.chunk.js.map": "/talentos-digitais-localiza/static/js/2.29f98829.chunk.js.map",
+    "static/js/2.bd442949.chunk.js": "/talentos-digitais-localiza/static/js/2.bd442949.chunk.js",
+    "static/js/2.bd442949.chunk.js.map": "/talentos-digitais-localiza/static/js/2.bd442949.chunk.js.map",
     "index.html": "/talentos-digitais-localiza/index.html",
-    "precache-manifest.0d5bee3fcb78e93376bbe36e6e50cf68.js": "/talentos-digitais-localiza/precache-manifest.0d5bee3fcb78e93376bbe36e6e50cf68.js",
+    "precache-manifest.0542a9a9c720fa2b50a6313070a30677.js": "/talentos-digitais-localiza/precache-manifest.0542a9a9c720fa2b50a6313070a30677.js",
     "service-worker.js": "/talentos-digitais-localiza/service-worker.js",
-    "static/css/main.346c23a1.chunk.css.map": "/talentos-digitais-localiza/static/css/main.346c23a1.chunk.css.map",
-    "static/js/2.29f98829.chunk.js.LICENSE": "/talentos-digitais-localiza/static/js/2.29f98829.chunk.js.LICENSE",
+    "static/css/main.5dc2804f.chunk.css.map": "/talentos-digitais-localiza/static/css/main.5dc2804f.chunk.css.map",
+    "static/js/2.bd442949.chunk.js.LICENSE": "/talentos-digitais-localiza/static/js/2.bd442949.chunk.js.LICENSE",
     "static/media/index.css": "/talentos-digitais-localiza/static/media/estrela-da-morte.1f6bc3df.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.82dd5dcc.js",
-    "static/js/2.29f98829.chunk.js",
-    "static/css/main.346c23a1.chunk.css",
-    "static/js/main.4aa298fa.chunk.js"
+    "static/js/2.bd442949.chunk.js",
+    "static/css/main.5dc2804f.chunk.css",
+    "static/js/main.ccc0db02.chunk.js"
   ]
 }
