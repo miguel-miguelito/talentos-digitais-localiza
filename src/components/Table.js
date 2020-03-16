@@ -46,9 +46,26 @@ function filterDataByNumericValues(data, column, comparison, value) {
 }
 
 class Table extends Component {
+  constructor(props) {
+    super(props);
+    this.setSortingRules = this.setSortingRules.bind(this);
+  }
+
   componentDidMount() {
     const { getData } = this.props;
     getData();
+  }
+
+  setSortingRules(obj1, obj2) {
+    const { columnToBeSorted, order } = this.props;
+
+    if (obj1[columnToBeSorted] === 'unknown'
+      || (Number(obj1[columnToBeSorted]) > Number(obj2[columnToBeSorted]) && order === 'ASC')
+      || (Number(obj1[columnToBeSorted]) < Number(obj2[columnToBeSorted]) && order === 'DESC')) {
+      return 1;
+    }
+
+    return -1;
   }
 
   filterData() {
@@ -62,8 +79,30 @@ class Table extends Component {
     return filterDataByName(newData, name);
   }
 
+  filterAndSortData() {
+    const { columnToBeSorted, order } = this.props;
+    const filteredData = this.filterData();
+
+    if (columnToBeSorted === 'name') {
+      const filteredColumns = filteredData.map((object) => object[columnToBeSorted]);
+      filteredColumns.sort();
+      const sortedData = filteredColumns.map((column) => (
+        filteredData.find((object) => object[columnToBeSorted] === column)
+      ));
+
+      if (order === 'DESC') {
+        sortedData.reverse();
+      }
+
+      return sortedData;
+    }
+
+    filteredData.sort(this.setSortingRules);
+    return filteredData;
+  }
+
   render() {
-    const dataTable = this.filterData();
+    const dataTable = this.filterAndSortData();
     let keysPlanet = Object.keys(dataTable[0]);
     const indexResidents = keysPlanet.indexOf('residents');
     keysPlanet = keysPlanet.slice(0, indexResidents);
@@ -96,6 +135,8 @@ class Table extends Component {
 const mapStateToProps = (state) => {
   const data = state.data;
   const name = state.filters[0].name;
+  const columnToBeSorted = state.sorting.column;
+  const order = state.sorting.order;
   const arrayColumns = state.filters.slice(1).map((item) => item.numericValues.column);
   const objectStates = state.filters.slice(1).reduce((acc, current, i) => ({
     ...acc,
@@ -104,7 +145,7 @@ const mapStateToProps = (state) => {
     [`valueNumber${i + 1}`]: current.numericValues.value,
   }), {});
 
-  return { ...objectStates, data, name, arrayColumns };
+  return { ...objectStates, data, name, columnToBeSorted, order, arrayColumns };
 };
 
 const mapDispatchToProps = (dispatch) => ({
@@ -114,6 +155,8 @@ const mapDispatchToProps = (dispatch) => ({
 Table.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   name: PropTypes.string.isRequired,
+  columnToBeSorted: PropTypes.string.isRequired,
+  order: PropTypes.string.isRequired,
   arrayColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
   getData: PropTypes.func.isRequired,
 };
